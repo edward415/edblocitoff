@@ -15,5 +15,17 @@
 /log/*.log
 /tmp
 
-# Ignore c9 specific folders
-.c9/
+#Ignore all .c9 specific files<br>
+/.c9/
+
+# Ignore application configuration
+/config/application.yml
+
+#ignore cloudinary config
+/config/cloudinary.yml
+
+#ignore carrierwave temp files
+public/uploads
+
+#ignore spring files
+/spring/
