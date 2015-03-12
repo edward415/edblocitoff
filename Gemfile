@@ -38,3 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Twitter Bootstrap for styling
+gem 'bootstrap-sass', '~> 3.3.3'
