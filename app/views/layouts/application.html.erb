@@ -8,14 +8,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+  <div class="container">
+  <nav class="navbar navbar-inverse">
     <ul class="nav nav-pills navbar-nav">
       <li role="presentation" class="active"><%= link_to "Home", welcome_index_path %></li>
       <li><%= link_to "About", welcome_about_path %></li>
     </ul>
-    </div>
+ 
   </nav>
+  </div>
   
 
   <%= yield %>
