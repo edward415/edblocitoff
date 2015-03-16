@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>EdBlocitoff</title>
+  <meta name="viewpoint" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
+  <nav class="navbar navbar-inverse">
+    <ul class="nav nav-pills navbar-nav">
+      <li role="presentation" class="active"><%= link_to "Home", welcome_index_path %></li>
+      <li><%= link_to "About", welcome_about_path %></li>
+    </ul>
+ 
+  </nav>
+  </div>
+  
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
