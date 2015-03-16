@@ -15,11 +15,11 @@
 /log/*.log
 /tmp
 
-<<<<<<< HEAD
 # Ignore all c9 related files.
 /.c9/
-=======
-#Ignore all .c9 specific files<br>
-/.c9/
 
->>>>>>> welcome-controller
+#Ignore secrets
+/config/application.yml
+
+# Ignore application configuration
+/config/application.yml
