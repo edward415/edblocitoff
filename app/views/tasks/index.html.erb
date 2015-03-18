@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">My Tasks</div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Do It</th>
+        <th>Days Left</th>
+        <th>Done</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @tasks.each do |t| %>
+      <tr>
+        <td><%= t.name %></td>
+        <td></td>
+        <td></td>
+      </tr>
+    <% end %>  
+    </tbody>
+  </table>
+  <%= render partial: 'form', locals: {task: @new_task} %>
+</div>
+

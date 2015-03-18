@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
   
-  resources :users, only: [:show] do
-    resources :tasks, only: [:create]
-  end
+  resources :users, only: [:show]
+  
+  resources :tasks, only: [:create, :index, :destroy]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
