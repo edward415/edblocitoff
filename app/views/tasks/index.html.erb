@@ -10,15 +10,7 @@
         <th>Done</th>
       </tr>
     </thead>
-    <tbody>
-    <% @tasks.each do |t| %>
-      <tr>
-        <td><%= t.name %></td>
-        <td></td>
-        <td></td>
-      </tr>
-    <% end %>  
-    </tbody>
+    <%= render partial: 'tasks', locals: {tasks: @tasks} %>
   </table>
   <%= render partial: 'form', locals: {task: @new_task} %>
 </div>
