@@ -37,9 +37,16 @@ class TasksController < ApplicationController
     @new_task = Task.new
   end
   
+  def complete
+    @task = current_user.tasks.find(params[:is])
+    @task.complete = True
+    redirect_to tasks_index_path
+  end
+  
   private
   def task_params
     params.require(:task).permit(:name, :completed, :id, :expires_at)
   end
   
+
 end

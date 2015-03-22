@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'tasks/create'
-
   devise_for :users
   get 'about' => 'welcome#about'
   
@@ -9,7 +7,9 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show]
   
-  resources :tasks, only: [:create, :index, :destroy]
+  resources :tasks, only: [:create, :index, :destroy] do
+    put :complete
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
