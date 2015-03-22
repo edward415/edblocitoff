@@ -38,9 +38,10 @@ class TasksController < ApplicationController
   end
   
   def complete
-    @task = current_user.tasks.find(params[:is])
-    @task.complete = True
-    redirect_to tasks_index_path
+    @task = current_user.tasks.find(params[:task_id])
+    @task.update_attribute(:completed, true)
+    @task.save!
+    redirect_to tasks_path
   end
   
   private
