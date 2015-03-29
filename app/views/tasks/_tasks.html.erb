@@ -1,9 +1,13 @@
 <tbody>
-<% @tasks.each do |t| %>
+<% @inactive_tasks.each do |t| %>
     <tr>
       <td><%= t.name %></td>
       <td><%= distance_of_time_in_words_to_now(t.expires_at) %></td>
-      <td><%= link_to "Completed", task_complete_path(t), method: :put %></td>
+      <% if t.completed %>
+      <td><%= link_to "", task_complete_path(t), method: :put, class: 'glyphicon glyphicon-paperclip' %></td>
+      <% else %>
+      <td><%= link_to "", task_complete_path(t), method: :put, class: 'glyphicon glyphicon-ok' %></td>
+      <% end %>
     </tr>
 <% end %>  
 </tbody>

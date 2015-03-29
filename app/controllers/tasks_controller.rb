@@ -31,10 +31,9 @@ class TasksController < ApplicationController
   end
   
   def index
-    @inactive_tasks = current_user.tasks.where("expires_at <= ? OR completed ?", Time.now, true)
+    @inactive_tasks = current_user.tasks.where("expires_at <= ? OR completed = ?", Time.now, true)
     @tasks = current_user.tasks.where("expires_at >= ?", Time.now).where(completed: false)
     @task = current_user.tasks
-    @new_task = Task.new
   end
   
   def complete
