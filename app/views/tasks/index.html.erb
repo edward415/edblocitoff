@@ -10,9 +10,13 @@
         <th>Done</th>
       </tr>
     </thead>
-    <%= render partial: 'tasks', locals: {tasks: @tasks} %>
+    <div class="js-tasks">
+      <%= render partial: 'tasks', locals: {tasks: @tasks} %>
+    </div>
   </table>
-  <%= render partial: 'form', locals: {task: @new_task} %>
+  <div class="new-task">
+    <%= render partial: 'form', locals: {task: @new_task} %>
+  </div>
 </div>
 
 
