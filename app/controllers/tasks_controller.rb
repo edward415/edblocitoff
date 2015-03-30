@@ -13,9 +13,14 @@ class TasksController < ApplicationController
     @task.expires_at = Time.now + 7.days
     
     if @task.save
-      redirect_to tasks_path, notice:"Task was created successfully"
+      flash[:notice] = "Task was created successfully"
     else
       flash[:error] = "Error creating task. Please try again."
+    end
+        
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
   
@@ -38,9 +43,20 @@ class TasksController < ApplicationController
   
   def complete
     @task = current_user.tasks.find(params[:task_id])
-    @task.update_attribute(:completed, true)
-    @task.save!
-    redirect_to tasks_path
+    if @task.completed
+      @task.update_attribute(:completed, false)
+      @task.save!
+      redirect_to tasks_path
+    else
+      @task.update_attribute(:completed, true)
+      @task.save!
+      redirect_to tasks_path
+    end
+    
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
   
   private

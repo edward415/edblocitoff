@@ -4,7 +4,7 @@
       <td><%= t.name %></td>
       <td><%= distance_of_time_in_words_to_now(t.expires_at) %></td>
       <% if t.completed %>
-      <td><%= link_to "", task_complete_path(t), method: :put, class: 'glyphicon glyphicon-paperclip' %></td>
+      <td id="js-complete"><%= link_to "", task_complete_path(t), method: :put, class: 'glyphicon glyphicon-paperclip', remote: true %></td>
       <% else %>
       <td><%= link_to "", task_complete_path(t), method: :put, class: 'glyphicon glyphicon-ok' %></td>
       <% end %>
