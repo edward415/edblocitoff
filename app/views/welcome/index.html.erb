@@ -1,7 +1,13 @@
 <div class="container">
 <div class="jumbotron">
-  <h1>EdBlocitoff</h1>
-  <p>Self-destructing to-do-list that gets stuff done.</p>
+  <h1 class="text-center">EdBlocitoff</h1>
+  <p class="text-center">Self-destructing to-do-list that gets stuff done.</p>
+  <% if !current_user %>
+  <div class="text-center">
+    <%= link_to "Sign Up Now!", new_user_registration_path, class: 'h3 btn btn-success text-center jumbo-btn' %>
+  </div>
+  <% end %>
+  
 </div>
 
 <div class="row">

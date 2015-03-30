@@ -15,3 +15,78 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+    background-image: url("http://blackdevilyardboss.com/wp-content/uploads/2011/09/board-black-series-texture-background-wood-wallpaper-wood-texture-wallpapers-476..jpg");
+    background-color: black;
+}
+
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: black;
+  background-color: #4D4DFF;
+  border: 1px white solid;
+}
+
+h1, h2, h3, h4, h5, p {
+    color:white;
+    font-family: "Open Sans";
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td
+{
+    color: white;
+    font-family: "Open Sans";
+    border: none;
+}
+
+.table > thead > tr > th
+{
+    border-bottom: 2px solid #FFFFFF;
+    font-family: "Open Sans";
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #4D4DFF;
+}
+
+.panel-default > .panel-heading
+{
+    background-color: black;
+    color: white;
+    font-family: "Open Sans";
+}
+
+label{
+    color:white;
+    font-family: "Open Sans";
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+    border-bottom: 2px solid #4D4DFF;
+    font-family: "Open Sans";
+}
+.navbar-inverse{
+    border-bottom: 2px solid #4D4DFF;
+    font-family: "Open Sans";
+}
+
+.btn-success{
+    background-color: #4D4DFF;
+    border: none;
+    font-family: "Open Sans";
+}
+
+.btn-success:hover{
+     background-color: #4D4DFF;
+     color: #9d9d9d;
+}
+
+.glyphicon{
+    color: honeydew;
+}
+
+.jumbo-btn{
+    background-color: #222222;
+}
