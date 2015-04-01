@@ -1,5 +1,5 @@
 <% if @task.save %>
-  $('.js-tasks').prepend("<%= escape_javascript(render partial: 'tasks', locals: {tasks: @tasks}) %>");
+  $('#js-tasks').append("<%= escape_javascript(render partial: 'tasks/task', locals: {t: @task}) %>");
 <% else %>
-  <('.new-task').html("<%= escape_javascript(render partial: 'tasks/form', locals {task: @new_task} %>");
+  $('#new-task').html("<%= escape_javascript(render partial: 'form', locals: {task: @new_task}) %>");
 <% end %>

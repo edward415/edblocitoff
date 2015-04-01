@@ -19,7 +19,6 @@ class TasksController < ApplicationController
     end
         
     respond_to do |format|
-      format.html
       format.js
     end
   end
@@ -33,6 +32,7 @@ class TasksController < ApplicationController
       flash[:error] = "There was an error deleting your task"
       redirect_to @tasks_path
     end
+
   end
   
   def index
@@ -46,17 +46,16 @@ class TasksController < ApplicationController
     if @task.completed
       @task.update_attribute(:completed, false)
       @task.save!
-      redirect_to tasks_path
+      # redirect_to tasks_path
     else
       @task.update_attribute(:completed, true)
       @task.save!
-      redirect_to tasks_path
+      # redirect_to tasks_path
     end
     
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
+    respond_to do |format|
+      format.js
+    end
   end
   
   private
